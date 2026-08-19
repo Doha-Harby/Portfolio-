@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink-900 font-body antialiased;
+}
+
+::selection {
+  background: #DCE8E1;
+  color: #1B2B27;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #B7CBC2;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8FAE9C;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2F6F62;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Signature: small monospace eyebrows / tag-style labels, e.g. <About/> */
+.tag-label {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+.tag-bracket {
+  color: #2F6F62;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
